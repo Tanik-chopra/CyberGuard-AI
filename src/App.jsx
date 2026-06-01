@@ -2,6 +2,7 @@ import { useState } from "react";
 import PasswordChecker from "./PasswordChecker";
 import PhishingDetector from "./PhishingDetector";
 import AIAssistant from "./AIAssistant";
+import SecurityScore from "./SecurityScore";
 
 import cyber1 from "./assets/cyber1.jpg";
 import cyber2 from "./assets/cyber2.jpg";
@@ -47,6 +48,12 @@ function App() {
           >
             AI Assistant
           </button>
+          <button
+  onClick={() => setActiveTool("score")}
+  className="hover:text-cyan-400"
+>
+  Security Score
+</button>
         </div>
       </nav>
 
@@ -94,30 +101,49 @@ function App() {
           </section>
 
           {/* Feature Cards */}
-          <section className="flex flex-wrap justify-center gap-6 mt-16 px-5">
+<section className="flex flex-wrap justify-center gap-6 mt-16 px-5">
 
-            <div className="bg-slate-900 p-6 rounded-xl w-72 hover:scale-105 hover:shadow-cyan-500/50 hover:shadow-2xl transition duration-300">
-              <h2 className="text-2xl mb-3">🔐 Password Checker</h2>
-              <p className="text-slate-400">
-                Analyze password strength instantly.
-              </p>
-            </div>
+  <div
+    onClick={() => setActiveTool("password")}
+    className="bg-slate-900 p-6 rounded-xl w-72 cursor-pointer hover:scale-105 hover:shadow-cyan-500/50 hover:shadow-2xl transition duration-300"
+  >
+    <h2 className="text-2xl mb-3">🔐 Password Checker</h2>
+    <p className="text-slate-400">
+      Analyze password strength instantly.
+    </p>
+  </div>
 
-            <div className="bg-slate-900 p-6 rounded-xl w-72 hover:scale-105 hover:shadow-cyan-500/50 hover:shadow-2xl transition duration-300">
-              <h2 className="text-2xl mb-3">⚠️ Phishing Detector</h2>
-              <p className="text-slate-400">
-                Detect suspicious URLs and phishing links.
-              </p>
-            </div>
+  <div
+    onClick={() => setActiveTool("phishing")}
+    className="bg-slate-900 p-6 rounded-xl w-72 cursor-pointer hover:scale-105 hover:shadow-cyan-500/50 hover:shadow-2xl transition duration-300"
+  >
+    <h2 className="text-2xl mb-3">⚠️ Phishing Detector</h2>
+    <p className="text-slate-400">
+      Detect suspicious URLs and phishing links.
+    </p>
+  </div>
 
-            <div className="bg-slate-900 p-6 rounded-xl w-72 hover:scale-105 hover:shadow-cyan-500/50 hover:shadow-2xl transition duration-300">
-              <h2 className="text-2xl mb-3">🤖 AI Assistant</h2>
-              <p className="text-slate-400">
-                Learn cybersecurity concepts instantly.
-              </p>
-            </div>
+  <div
+    onClick={() => setActiveTool("ai")}
+    className="bg-slate-900 p-6 rounded-xl w-72 cursor-pointer hover:scale-105 hover:shadow-cyan-500/50 hover:shadow-2xl transition duration-300"
+  >
+    <h2 className="text-2xl mb-3">🤖 AI Assistant</h2>
+    <p className="text-slate-400">
+      Learn cybersecurity concepts instantly.
+    </p>
+  </div>
 
-          </section>
+  <div
+    onClick={() => setActiveTool("score")}
+    className="bg-slate-900 p-6 rounded-xl w-72 cursor-pointer hover:scale-105 hover:shadow-cyan-500/50 hover:shadow-2xl transition duration-300"
+  >
+    <h2 className="text-2xl mb-3">🛡 Security Score</h2>
+    <p className="text-slate-400">
+      Get an overall cybersecurity risk score.
+    </p>
+  </div>
+
+</section>
 
           {/* Dashboard Stats */}
           <section className="flex flex-wrap justify-center gap-6 py-16">
@@ -161,6 +187,46 @@ function App() {
           <AIAssistant />
         </section>
       )}
+      {activeTool === "score" && (
+  <section className="py-10 px-5">
+    <SecurityScore />
+  </section>
+)}
+{/* About Project */}
+<section className="max-w-5xl mx-auto py-16 px-6 text-center">
+  <h2 className="text-4xl font-bold text-cyan-400 mb-6">
+    Why CyberGuard AI?
+  </h2>
+
+  <p className="text-slate-300 text-lg leading-8">
+    CyberGuard AI is a cybersecurity awareness platform designed to help
+    users identify online threats, strengthen passwords, detect phishing
+    attacks, and improve digital safety through AI-powered tools.
+  </p>
+
+  <div className="grid md:grid-cols-3 gap-6 mt-10">
+    <div className="bg-slate-900 p-6 rounded-xl">
+      <h3 className="text-xl font-bold mb-3">🔒 Password Security</h3>
+      <p className="text-slate-400">
+        Check password strength and improve account protection.
+      </p>
+    </div>
+
+    <div className="bg-slate-900 p-6 rounded-xl">
+      <h3 className="text-xl font-bold mb-3">⚠️ Phishing Detection</h3>
+      <p className="text-slate-400">
+        Identify suspicious links and avoid cyber scams.
+      </p>
+    </div>
+
+    <div className="bg-slate-900 p-6 rounded-xl">
+      <h3 className="text-xl font-bold mb-3">🤖 AI Assistance</h3>
+      <p className="text-slate-400">
+        Learn cybersecurity concepts with intelligent guidance.
+      </p>
+    </div>
+  </div>
+</section>
 
       {/* Footer */}
       <footer className="text-center py-8 border-t border-slate-800 text-slate-400">
@@ -173,7 +239,7 @@ function App() {
         </p>
 
         <p className="mt-3 text-sm">
-          Built by Tanik Chopra • Hackathon Project 2026
+         Built by Tanik Chopra | Cybersecurity & AI Enthusiast
         </p>
       </footer>
 
