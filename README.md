@@ -1,16 +1,59 @@
-# React + Vite
+# 🛡 CyberGuard AI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+AI-Powered Cybersecurity Protection Platform built using React, Vite and Tailwind CSS.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
+https://YOUR-VERCEL-LINK.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📌 Features
 
-## React Compiler
+### 🔐 Password Strength Checker
+- Checks password strength
+- Detects weak passwords
+- Gives instant feedback
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### ⚠️ Phishing URL Detector
+- Detects suspicious URLs
+- Flags common phishing keywords
+- Identifies risky shortened links
 
-## Expanding the ESLint configuration
+### 🤖 AI Cybersecurity Assistant
+- Answers cybersecurity questions
+- Provides awareness tips
+- Helps users learn cyber safety
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🛡 Security Score
+- Calculates overall security score
+- Shows cybersecurity risk level
+- Provides recommendations
+
+## 🖼 Screenshots
+
+### Home Page
+(Add screenshot here)
+![alt text](image.png)
+
+### Password Checker
+![alt text](image-1.png)
+
+### Phishing Detector
+![alt text](image-2.png)
+
+### AI Assistant
+![alt text](image-3.png)
+
+## 🛠 Tech Stack
+
+- React.js
+- Vite
+- Tailwind CSS
+- JavaScript
+
+## 📂 Installation
+
+```bash
+git clone https://github.com/Tanik-chopra/CyberGuard-AI.git
+cd CyberGuard-AI
+npm install
+npm run dev
+
