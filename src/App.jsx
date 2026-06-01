@@ -54,6 +54,14 @@ function App() {
 >
   Security Score
 </button>
+<a
+  href="https://github.com/Tanik-chopra/CyberGuard-AI"
+  target="_blank"
+  rel="noreferrer"
+  className="hover:text-cyan-400"
+>
+  GitHub
+</a>
         </div>
       </nav>
 
@@ -164,6 +172,100 @@ function App() {
             </div>
 
           </section>
+          {/* Cyber Safety Tips */}
+<section className="max-w-5xl mx-auto px-6 pb-16">
+  <div className="bg-slate-900 p-8 rounded-2xl border border-cyan-500 shadow-lg">
+    <h2 className="text-3xl font-bold text-cyan-400 mb-6 text-center">
+      🛡 Cyber Safety Tips
+    </h2>
+
+    <div className="grid md:grid-cols-2 gap-4 text-slate-300">
+      <p>✅ Use passwords longer than 12 characters</p>
+      <p>✅ Enable Two-Factor Authentication</p>
+      <p>✅ Never click suspicious email links</p>
+      <p>✅ Keep your software updated</p>
+      <p>✅ Verify website URLs before login</p>
+      <p>✅ Avoid public Wi-Fi for banking</p>
+      <p>✅ Use a password manager</p>
+      <p>✅ Monitor accounts for unusual activity</p>
+    </div>
+  </div>
+</section>
+{/* Latest Cyber Threats */}
+<section className="max-w-6xl mx-auto px-6 pb-20">
+  <h2 className="text-3xl font-bold text-cyan-400 text-center mb-8">
+    🚨 Latest Cyber Threat Alerts
+  </h2>
+
+  <div className="grid md:grid-cols-3 gap-6">
+
+    <div className="bg-slate-900 p-6 rounded-xl">
+      <h3 className="font-bold text-red-400 mb-2">
+        Phishing Campaign Surge
+      </h3>
+      <p className="text-slate-400">
+        Increased phishing emails targeting banking customers worldwide.
+      </p>
+    </div>
+
+    <div className="bg-slate-900 p-6 rounded-xl">
+      <h3 className="font-bold text-yellow-400 mb-2">
+        Ransomware Activity
+      </h3>
+      <p className="text-slate-400">
+        Organizations are reporting new ransomware attacks this month.
+      </p>
+    </div>
+
+    <div className="bg-slate-900 p-6 rounded-xl">
+      <h3 className="font-bold text-green-400 mb-2">
+        Security Awareness
+      </h3>
+      <p className="text-slate-400">
+        Experts recommend MFA and strong passwords to reduce risks.
+      </p>
+    </div>
+
+  </div>
+</section>
+{/* How It Works */}
+<section className="max-w-6xl mx-auto px-6 pb-20">
+  <h2 className="text-3xl font-bold text-cyan-400 text-center mb-8">
+    ⚙️ How CyberGuard AI Works
+  </h2>
+
+  <div className="grid md:grid-cols-4 gap-6">
+
+    <div className="bg-slate-900 p-6 rounded-xl text-center">
+      <h3 className="text-xl font-bold mb-3">1️⃣ Input</h3>
+      <p className="text-slate-400">
+        User enters password, URL or cybersecurity question.
+      </p>
+    </div>
+
+    <div className="bg-slate-900 p-6 rounded-xl text-center">
+      <h3 className="text-xl font-bold mb-3">2️⃣ Analysis</h3>
+      <p className="text-slate-400">
+        CyberGuard AI analyzes security risks.
+      </p>
+    </div>
+
+    <div className="bg-slate-900 p-6 rounded-xl text-center">
+      <h3 className="text-xl font-bold mb-3">3️⃣ Detection</h3>
+      <p className="text-slate-400">
+        Threats and weaknesses are identified.
+      </p>
+    </div>
+
+    <div className="bg-slate-900 p-6 rounded-xl text-center">
+      <h3 className="text-xl font-bold mb-3">4️⃣ Protection</h3>
+      <p className="text-slate-400">
+        Security recommendations are provided.
+      </p>
+    </div>
+
+  </div>
+</section>
         </>
       )}
 
@@ -192,41 +294,7 @@ function App() {
     <SecurityScore />
   </section>
 )}
-{/* About Project */}
-<section className="max-w-5xl mx-auto py-16 px-6 text-center">
-  <h2 className="text-4xl font-bold text-cyan-400 mb-6">
-    Why CyberGuard AI?
-  </h2>
 
-  <p className="text-slate-300 text-lg leading-8">
-    CyberGuard AI is a cybersecurity awareness platform designed to help
-    users identify online threats, strengthen passwords, detect phishing
-    attacks, and improve digital safety through AI-powered tools.
-  </p>
-
-  <div className="grid md:grid-cols-3 gap-6 mt-10">
-    <div className="bg-slate-900 p-6 rounded-xl">
-      <h3 className="text-xl font-bold mb-3">🔒 Password Security</h3>
-      <p className="text-slate-400">
-        Check password strength and improve account protection.
-      </p>
-    </div>
-
-    <div className="bg-slate-900 p-6 rounded-xl">
-      <h3 className="text-xl font-bold mb-3">⚠️ Phishing Detection</h3>
-      <p className="text-slate-400">
-        Identify suspicious links and avoid cyber scams.
-      </p>
-    </div>
-
-    <div className="bg-slate-900 p-6 rounded-xl">
-      <h3 className="text-xl font-bold mb-3">🤖 AI Assistance</h3>
-      <p className="text-slate-400">
-        Learn cybersecurity concepts with intelligent guidance.
-      </p>
-    </div>
-  </div>
-</section>
 
       {/* Footer */}
       <footer className="text-center py-8 border-t border-slate-800 text-slate-400">
