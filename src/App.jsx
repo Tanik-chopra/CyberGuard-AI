@@ -1,65 +1,116 @@
+import cyber1 from "./assets/cyber1.jpg";
+import cyber2 from "./assets/cyber2.jpg";
+import cyber3 from "./assets/cyber3.jpg";
+
 function App() {
   return (
-    <div
-      style={{
-        minHeight: "100vh",
-        backgroundColor: "#0a0f1f",
-        color: "white",
-        textAlign: "center",
-        padding: "80px 20px",
-      }}
-    >
-      <h1 style={{ fontSize: "4rem" }}>🛡️ CyberGuard AI</h1>
+    <div style={styles.body}>
 
-      <p
-        style={{
-          fontSize: "1.5rem",
-          marginTop: "20px",
-          color: "#b0b8d1",
-        }}
-      >
+      {/* HEADER */}
+      <h1 style={styles.title}>🛡️ CyberGuard AI</h1>
+      <p style={styles.subtitle}>
         AI-Powered Cybersecurity Protection Platform
       </p>
 
-      <button
-        style={{
-          marginTop: "30px",
-          padding: "12px 25px",
-          fontSize: "18px",
-          borderRadius: "10px",
-          border: "none",
-          cursor: "pointer",
-        }}
-      >
-        Get Started
-      </button>
+      <button style={styles.button}>Get Started</button>
 
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          gap: "20px",
-          marginTop: "80px",
-          flexWrap: "wrap",
-        }}
-      >
-        <div>
-          <h3>🤖 AI Assistant</h3>
-          <p>Cybersecurity help powered by AI</p>
-        </div>
-
-        <div>
-          <h3>🔒 Password Checker</h3>
-          <p>Analyze password strength</p>
-        </div>
-
-        <div>
-          <h3>⚠️ Phishing Detector</h3>
-          <p>Detect suspicious URLs</p>
-        </div>
+      {/* IMAGE SECTION */}
+      <div style={styles.imageRow}>
+        <img src={cyber1} style={styles.image} />
+        <img src={cyber2} style={styles.image} />
+        <img src={cyber3} style={styles.image} />
       </div>
+
+      {/* FEATURES */}
+      <div style={styles.cardContainer}>
+        
+        <div style={styles.card}>
+          <h2>🤖 AI Assistant</h2>
+          <p>Ask anything about cybersecurity threats</p>
+        </div>
+
+        <div style={styles.card}>
+          <h2>🔐 Password Checker</h2>
+          <p>Check strength of your passwords</p>
+        </div>
+
+        <div style={styles.card}>
+          <h2>⚠️ Phishing Detector</h2>
+          <p>Detect fake and malicious URLs</p>
+        </div>
+
+      </div>
+
     </div>
   );
 }
+
+const styles = {
+  body: {
+    minHeight: "100vh",
+    background: "radial-gradient(circle at top, #0f172a, #020617)",
+    color: "white",
+    textAlign: "center",
+    padding: "50px",
+    fontFamily: "Arial, sans-serif",
+  },
+
+  title: {
+    fontSize: "3.8rem",
+    marginBottom: "10px",
+    textShadow: "0 0 20px #3b82f6",
+  },
+
+  subtitle: {
+    fontSize: "1.3rem",
+    color: "#93c5fd",
+    marginBottom: "25px",
+  },
+
+  button: {
+    padding: "12px 28px",
+    fontSize: "16px",
+    borderRadius: "10px",
+    border: "none",
+    cursor: "pointer",
+    background: "linear-gradient(90deg, #2563eb, #1d4ed8)",
+    color: "white",
+    marginBottom: "40px",
+    boxShadow: "0 0 15px #2563eb",
+  },
+
+  imageRow: {
+    display: "flex",
+    justifyContent: "center",
+    gap: "20px",
+    flexWrap: "wrap",
+    marginBottom: "50px",
+  },
+
+  image: {
+    width: "260px",
+    height: "170px",
+    objectFit: "cover",
+    borderRadius: "14px",
+    border: "2px solid #1e293b",
+    boxShadow: "0 0 15px rgba(37, 99, 235, 0.3)",
+  },
+
+  cardContainer: {
+    display: "flex",
+    justifyContent: "center",
+    gap: "20px",
+    flexWrap: "wrap",
+  },
+
+  card: {
+    background: "rgba(17, 24, 39, 0.8)",
+    padding: "22px",
+    borderRadius: "15px",
+    width: "260px",
+    border: "1px solid #1f2937",
+    boxShadow: "0 0 10px rgba(0,0,0,0.4)",
+  },
+};
 
 export default App;
