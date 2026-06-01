@@ -32,19 +32,20 @@ function PasswordChecker() {
       <h2>🔐 Password Strength Checker</h2>
 
       <input
-        type="password"
-        placeholder="Enter your password..."
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        style={{
-          width: "90%",
-          padding: "12px",
-          borderRadius: "8px",
-          border: "none",
-          marginTop: "15px",
-          fontSize: "16px",
-        }}
-      />
+  type="password"
+  placeholder="Enter password"
+  value={password}
+  onChange={(e) => setPassword(e.target.value)}
+  style={{
+    width: "90%",
+    padding: "12px",
+    borderRadius: "8px",
+    border: "1px solid #374151",
+    backgroundColor: "#1f2937",
+    color: "white",
+    fontSize: "16px",
+  }}
+/>
 
       <div
         style={{

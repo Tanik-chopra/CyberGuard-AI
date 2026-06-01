@@ -44,11 +44,14 @@ function AIAssistant() {
         value={question}
         onChange={(e) => setQuestion(e.target.value)}
         style={{
-          width: "90%",
-          padding: "12px",
-          borderRadius: "8px",
-          border: "none",
-        }}
+  width: "90%",
+  padding: "12px",
+  borderRadius: "8px",
+  border: "1px solid #374151",
+  backgroundColor: "#1f2937",
+  color: "white",
+  fontSize: "16px",
+}}
       />
 
       <br />
