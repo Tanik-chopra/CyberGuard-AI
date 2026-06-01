@@ -1,116 +1,166 @@
+import PasswordChecker from "./PasswordChecker";
+
 import cyber1 from "./assets/cyber1.jpg";
 import cyber2 from "./assets/cyber2.jpg";
 import cyber3 from "./assets/cyber3.jpg";
 
 function App() {
   return (
-    <div style={styles.body}>
-
+    <div
+      style={{
+        minHeight: "100vh",
+        backgroundColor: "#0a0f1f",
+        color: "white",
+        textAlign: "center",
+        padding: "40px 20px",
+        fontFamily: "Arial, sans-serif",
+      }}
+    >
       {/* HEADER */}
-      <h1 style={styles.title}>🛡️ CyberGuard AI</h1>
-      <p style={styles.subtitle}>
+      <h1
+        style={{
+          fontSize: "4rem",
+          marginBottom: "10px",
+        }}
+      >
+        🛡️ CyberGuard AI
+      </h1>
+
+      <p
+        style={{
+          fontSize: "1.3rem",
+          color: "#b0b8d1",
+        }}
+      >
         AI-Powered Cybersecurity Protection Platform
       </p>
 
-      <button style={styles.button}>Get Started</button>
+      {/* NAVIGATION */}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          gap: "15px",
+          marginTop: "30px",
+          flexWrap: "wrap",
+        }}
+      >
+        <button style={buttonStyle}>🏠 Home</button>
+        <button style={buttonStyle}>🔐 Password Checker</button>
+        <button style={buttonStyle}>⚠️ Phishing Detector</button>
+        <button style={buttonStyle}>🤖 AI Assistant</button>
+      </div>
 
-      {/* IMAGE SECTION */}
-      <div style={styles.imageRow}>
-        <img src={cyber1} style={styles.image} />
-        <img src={cyber2} style={styles.image} />
-        <img src={cyber3} style={styles.image} />
+      {/* IMAGES */}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          gap: "20px",
+          marginTop: "50px",
+          flexWrap: "wrap",
+        }}
+      >
+        <img src={cyber1} alt="Cyber Security" style={imageStyle} />
+        <img src={cyber2} alt="Data Protection" style={imageStyle} />
+        <img src={cyber3} alt="AI Security" style={imageStyle} />
       </div>
 
       {/* FEATURES */}
-      <div style={styles.cardContainer}>
-        
-        <div style={styles.card}>
-          <h2>🤖 AI Assistant</h2>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          gap: "20px",
+          marginTop: "50px",
+          flexWrap: "wrap",
+        }}
+      >
+        <div style={cardStyle}>
+          <h3>🤖 AI Assistant</h3>
           <p>Ask anything about cybersecurity threats</p>
         </div>
 
-        <div style={styles.card}>
-          <h2>🔐 Password Checker</h2>
+        <div style={cardStyle}>
+          <h3>🔐 Password Checker</h3>
           <p>Check strength of your passwords</p>
         </div>
 
-        <div style={styles.card}>
-          <h2>⚠️ Phishing Detector</h2>
+        <div style={cardStyle}>
+          <h3>⚠️ Phishing Detector</h3>
           <p>Detect fake and malicious URLs</p>
         </div>
-
       </div>
 
+      {/* PASSWORD CHECKER */}
+      <div style={{ marginTop: "60px" }}>
+        <PasswordChecker />
+      </div>
+
+      {/* STATS */}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          gap: "30px",
+          marginTop: "60px",
+          flexWrap: "wrap",
+        }}
+      >
+        <div style={cardStyle}>
+          <h2>500+</h2>
+          <p>Passwords Checked</p>
+        </div>
+
+        <div style={cardStyle}>
+          <h2>120+</h2>
+          <p>Threats Detected</p>
+        </div>
+
+        <div style={cardStyle}>
+          <h2>99%</h2>
+          <p>Security Awareness</p>
+        </div>
+      </div>
+
+      {/* FOOTER */}
+      <footer
+        style={{
+          marginTop: "80px",
+          padding: "20px",
+          color: "#94a3b8",
+        }}
+      >
+        © 2026 CyberGuard AI | Built for Hackathon
+      </footer>
     </div>
   );
 }
 
-const styles = {
-  body: {
-    minHeight: "100vh",
-    background: "radial-gradient(circle at top, #0f172a, #020617)",
-    color: "white",
-    textAlign: "center",
-    padding: "50px",
-    fontFamily: "Arial, sans-serif",
-  },
+const buttonStyle = {
+  padding: "12px 20px",
+  borderRadius: "8px",
+  border: "none",
+  cursor: "pointer",
+  backgroundColor: "#2563eb",
+  color: "white",
+  fontWeight: "bold",
+};
 
-  title: {
-    fontSize: "3.8rem",
-    marginBottom: "10px",
-    textShadow: "0 0 20px #3b82f6",
-  },
+const cardStyle = {
+  backgroundColor: "#111827",
+  padding: "20px",
+  borderRadius: "12px",
+  width: "250px",
+  boxShadow: "0 0 15px rgba(37,99,235,0.2)",
+};
 
-  subtitle: {
-    fontSize: "1.3rem",
-    color: "#93c5fd",
-    marginBottom: "25px",
-  },
-
-  button: {
-    padding: "12px 28px",
-    fontSize: "16px",
-    borderRadius: "10px",
-    border: "none",
-    cursor: "pointer",
-    background: "linear-gradient(90deg, #2563eb, #1d4ed8)",
-    color: "white",
-    marginBottom: "40px",
-    boxShadow: "0 0 15px #2563eb",
-  },
-
-  imageRow: {
-    display: "flex",
-    justifyContent: "center",
-    gap: "20px",
-    flexWrap: "wrap",
-    marginBottom: "50px",
-  },
-
-  image: {
-    width: "260px",
-    height: "170px",
-    objectFit: "cover",
-    borderRadius: "14px",
-    border: "2px solid #1e293b",
-    boxShadow: "0 0 15px rgba(37, 99, 235, 0.3)",
-  },
-
-  cardContainer: {
-    display: "flex",
-    justifyContent: "center",
-    gap: "20px",
-    flexWrap: "wrap",
-  },
-
-  card: {
-    background: "rgba(17, 24, 39, 0.8)",
-    padding: "22px",
-    borderRadius: "15px",
-    width: "260px",
-    border: "1px solid #1f2937",
-    boxShadow: "0 0 10px rgba(0,0,0,0.4)",
-  },
+const imageStyle = {
+  width: "300px",
+  height: "180px",
+  objectFit: "cover",
+  borderRadius: "12px",
+  boxShadow: "0 0 15px rgba(37,99,235,0.3)",
 };
 
 export default App;
