@@ -5,35 +5,35 @@ function AIAssistant() {
   const [answer, setAnswer] = useState("");
 
   const getAnswer = () => {
-    let q = question.toLowerCase();
+    const q = question.toLowerCase();
 
     if (q.includes("phishing")) {
-      setAnswer("Phishing is a cyber attack where attackers trick users into giving personal information like passwords or OTPs.");
-    } 
-    else if (q.includes("password")) {
-      setAnswer("Use strong passwords with uppercase, lowercase, numbers, and symbols. Never reuse passwords.");
-    } 
-    else if (q.includes("virus")) {
-      setAnswer("A computer virus is malicious software that can damage files or steal data.");
-    } 
-    else if (q.includes("hack")) {
-      setAnswer("Hacking is gaining unauthorized access to systems. Always use security tools and 2FA.");
-    } 
-    else {
-      setAnswer("Sorry, I am a simple demo AI. Try asking about phishing, password, virus, or hacking.");
+      setAnswer(
+        "Phishing is a cyber attack where attackers trick users into revealing sensitive information through fake emails, websites, or messages."
+      );
+    } else if (q.includes("password")) {
+      setAnswer(
+        "A strong password should contain uppercase letters, lowercase letters, numbers, and special characters."
+      );
+    } else if (q.includes("malware")) {
+      setAnswer(
+        "Malware is malicious software designed to damage, steal data, or gain unauthorized access to systems."
+      );
+    } else {
+      setAnswer(
+        "I can help with cybersecurity topics such as phishing, malware, passwords, ransomware, and online safety."
+      );
     }
   };
 
   return (
     <div
       style={{
-        marginTop: "50px",
-        padding: "20px",
-        backgroundColor: "#111827",
-        borderRadius: "10px",
-        width: "60%",
-        marginLeft: "auto",
-        marginRight: "auto",
+        background: "#111827",
+        padding: "25px",
+        borderRadius: "12px",
+        maxWidth: "700px",
+        margin: "40px auto",
       }}
     >
       <h2>🤖 AI Cyber Assistant</h2>
@@ -44,9 +44,10 @@ function AIAssistant() {
         value={question}
         onChange={(e) => setQuestion(e.target.value)}
         style={{
-          padding: "10px",
-          width: "80%",
-          marginTop: "10px",
+          width: "90%",
+          padding: "12px",
+          borderRadius: "8px",
+          border: "none",
         }}
       />
 
@@ -57,6 +58,10 @@ function AIAssistant() {
         style={{
           marginTop: "15px",
           padding: "10px 20px",
+          borderRadius: "8px",
+          border: "none",
+          background: "#2563eb",
+          color: "white",
           cursor: "pointer",
         }}
       >
@@ -65,6 +70,7 @@ function AIAssistant() {
 
       {answer && (
         <div style={{ marginTop: "20px" }}>
+          <h3>Answer:</h3>
           <p>{answer}</p>
         </div>
       )}

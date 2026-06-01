@@ -1,5 +1,6 @@
 import PasswordChecker from "./PasswordChecker";
-
+import PhishingDetector from "./PhishingDetector";
+import AIAssistant from "./AIAssistant";
 import cyber1 from "./assets/cyber1.jpg";
 import cyber2 from "./assets/cyber2.jpg";
 import cyber3 from "./assets/cyber3.jpg";
@@ -95,6 +96,8 @@ function App() {
       {/* PASSWORD CHECKER */}
       <div style={{ marginTop: "60px" }}>
         <PasswordChecker />
+        <PhishingDetector />
+        <AIAssistant />
       </div>
 
       {/* STATS */}

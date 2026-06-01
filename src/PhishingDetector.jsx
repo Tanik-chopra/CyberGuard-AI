@@ -2,49 +2,57 @@ import { useState } from "react";
 
 function PhishingDetector() {
   const [url, setUrl] = useState("");
-  const [result, setResult] = useState(null);
+  const [result, setResult] = useState("");
 
   const checkURL = () => {
-    let score = 0;
+    const suspiciousWords = [
+      "login",
+      "verify",
+      "secure",
+      "bank",
+      "update",
+      "free",
+      "gift",
+      "winner",
+    ];
 
-    if (url.includes("http://")) score += 30;
-    if (url.includes("@")) score += 20;
-    if (url.length > 75) score += 20;
-    if (url.includes("login") || url.includes("verify")) score += 20;
-    if (!url.includes(".com") && !url.includes(".org")) score += 10;
+    let suspicious = suspiciousWords.some((word) =>
+      url.toLowerCase().includes(word)
+    );
 
-    if (score === 0) {
-      setResult({ status: "SAFE", score: 10 });
-    } else if (score < 50) {
-      setResult({ status: "SUSPICIOUS", score });
-    } else {
-      setResult({ status: "DANGEROUS", score });
+    if (url.includes("@") || url.includes("bit.ly")) {
+      suspicious = true;
     }
+
+    setResult(
+      suspicious
+        ? "⚠️ Potential Phishing URL Detected"
+        : "✅ URL Appears Safe"
+    );
   };
 
   return (
     <div
       style={{
-        marginTop: "50px",
-        padding: "20px",
-        backgroundColor: "#111827",
-        borderRadius: "10px",
-        width: "60%",
-        marginLeft: "auto",
-        marginRight: "auto",
+        background: "#111827",
+        padding: "25px",
+        borderRadius: "12px",
+        maxWidth: "600px",
+        margin: "40px auto",
       }}
     >
       <h2>⚠️ Phishing URL Detector</h2>
 
       <input
         type="text"
-        placeholder="Enter URL..."
+        placeholder="Paste URL here..."
         value={url}
         onChange={(e) => setUrl(e.target.value)}
         style={{
-          padding: "10px",
-          width: "80%",
-          marginTop: "10px",
+          width: "90%",
+          padding: "12px",
+          borderRadius: "8px",
+          border: "none",
         }}
       />
 
@@ -55,17 +63,20 @@ function PhishingDetector() {
         style={{
           marginTop: "15px",
           padding: "10px 20px",
+          borderRadius: "8px",
+          border: "none",
+          background: "#2563eb",
+          color: "white",
           cursor: "pointer",
         }}
       >
-        Check URL
+        Scan URL
       </button>
 
       {result && (
-        <div style={{ marginTop: "20px" }}>
-          <h3>Status: {result.status}</h3>
-          <p>Risk Score: {result.score}/100</p>
-        </div>
+        <h3 style={{ marginTop: "20px" }}>
+          {result}
+        </h3>
       )}
     </div>
   );
