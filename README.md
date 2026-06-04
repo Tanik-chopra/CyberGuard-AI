@@ -3,7 +3,7 @@
 AI-Powered Cybersecurity Protection Platform built using React, Vite and Tailwind CSS.
 
 ## 🚀 Live Demo
-https://vercel.com/tanik-chopra-s-projects/cyber-guard-ai
+cyber-guard-ai-two.vercel.app
 # website link
 https://cyber-guard-ikf8qhdoe-tanik-chopra-s-projects.vercel.app/
 
